@@ -56,13 +56,13 @@ StationReport* createReport(int reportsCount) {
     switch (choice) {
         case 1:
             reportInstance.rank = "Senior inspector";
-        break;
+            break;
         case 2:
             reportInstance.rank = "Junior inspector";
-        break;
+            break;
         case 3:
             reportInstance.rank = "Firefighter";
-        break;
+            break;
     }
 // ---------------------------------------------------------------------------------------
     std::cout << "Air temperature (Celsius): ";
@@ -118,16 +118,15 @@ StationReport* createReport(int reportsCount) {
     while (!(std::cin >> reportInstance.reportTimeSeconds) || reportInstance.reportTimeSeconds < 64800 || reportInstance.reportTimeSeconds > 86400) {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "Invalid report time. Please enter a non-negative number (you can receive a response only after 18:00 that is, after 64800 seconds):";
+        std::cout << "Invalid report time. Please enter a non-negative number (you can receive a response only after 18:00 that is, after 64800 seconds): ";
     }
 
     std::cout << " " << std::endl;
     reports[i] = reportInstance;
-
     }
-
     return reports;
 }
+
 
 
 std::tm getDate(int year, int month, int day) {

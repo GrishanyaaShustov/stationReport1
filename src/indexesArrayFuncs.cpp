@@ -48,12 +48,11 @@ ThreatsEliminatedPair* createThreatesElimIndexesArray(StationReport array[], int
 
     for (int i = 0; i < size - 1; i ++) {
         for (int j = i + 1; j < size; j ++) {
-            if (indexesArray[i].threatsEliminated > indexesArray[j].threatsEliminated) {
+            if (indexesArray[i].threatsEliminated < indexesArray[j].threatsEliminated) {
                 std::ranges::swap(indexesArray[i], indexesArray[j]);
             }
         }
     }
-
     return indexesArray;
 }
 
