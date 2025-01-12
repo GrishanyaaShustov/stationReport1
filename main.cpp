@@ -8,15 +8,20 @@
 #include "searchFuncs.h"
 
 // TEST DATA Раскоментировать при использовании тестовых данных
-int size = 4;
-StationReport report1 = {1, 1, "Grigoriy", "Shustov", "Senior inspector", 32.5, 12.1, 4, getDate(2024, 12, 24), 80000};
-StationReport report2 = {2, 3, "Ivan", "Ivanov", "Junior inspector", 31.2, 9.1, 2, getDate(2024, 12, 21), 72000};
-StationReport report3 = {3, 2, "Petr", "Petrovich", "Firefighter", 21, 4, 3, getDate(2024, 12, 12), 77777};
-StationReport report4 = {4, 32, "Magnus", "Carlsen", "Senior inspector", 12, 1.8, 9, getDate(2025, 1, 1), 69321};
-StationReport *sourceReports = {new StationReport[size]{report1, report2, report3, report4}};
+// int size = 4;
+// StationReport report1 = {1, 1, "Grigoriy", "Shustov", "Senior inspector", 32.5, 12.1, 4, getDate(2024, 12, 24), 80000};
+// StationReport report2 = {2, 3, "Ivan", "Ivanov", "Junior inspector", 31.2, 9.1, 2, getDate(2024, 12, 21), 72000};
+// StationReport report3 = {3, 2, "Petr", "Petrov", "Firefighter", 21, 4, 3, getDate(2024, 12, 12), 77777};
+// StationReport report4 = {4, 32, "Magnus", "Carlsen", "Senior inspector", 12, 1.8, 9, getDate(2025, 1, 1), 69321};
+// StationReport *sourceReports = {new StationReport[size]{report1, report2, report3, report4}};
 // TEST DATA
 
 int main() {
+
+    // Закоментировать при использовании тестовых данных
+    int size = 4;
+    StationReport* sourceReports = createReport(size);
+
     LastNamePair *indexesArrayFamilies = createLastNameIndexesArray(sourceReports, size);
     ThreatsEliminatedPair *indexesArrayThreats = createThreatesElimIndexesArray(sourceReports, size);
 
