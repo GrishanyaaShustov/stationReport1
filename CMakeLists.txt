@@ -15,4 +15,6 @@ add_executable(stationReport1 main.cpp
         headers/searchFuncs.h
         src/searchFunc.cpp
         buildMainFuncs.h
-        buildMainFuncs.cpp)
+        buildMainFuncs.cpp
+        src/deleteArrayElem.cpp
+        headers/deleteArrayElem.h)

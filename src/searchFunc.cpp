@@ -1,6 +1,7 @@
 #include "stationReport.h"
 
-StationReport* binarySearchByFamilieRecursive(LastNamePair* familieIndexArray, StationReport* sourceReports, std::string key, int left, int right) {
+StationReport *binarySearchByFamilieRecursive(LastNamePair *familieIndexArray, StationReport *sourceReports,
+                                              std::string key, int left, int right) {
     if (left > right) {
         return nullptr;
     }
@@ -16,7 +17,8 @@ StationReport* binarySearchByFamilieRecursive(LastNamePair* familieIndexArray, S
     }
 }
 
-StationReport* binarySearchByElimThreads(ThreatsEliminatedPair* threatsElimPair, StationReport* sourceReports, int key, int size) {
+StationReport *binarySearchByElimThreads(ThreatsEliminatedPair *threatsElimPair, StationReport *sourceReports, int key,
+                                         int size) {
     int left = 0;
     int right = size - 1;
 
@@ -34,18 +36,16 @@ StationReport* binarySearchByElimThreads(ThreatsEliminatedPair* threatsElimPair,
     return nullptr;
 }
 
-StationReport* binarySearchByReportId(StationReport* sourceReports, int keyId, int size) {
+StationReport *binarySearchByReportId(StationReport *sourceReports, int keyId, int size) {
     int left = 0;
     int right = size - 1;
     while (left <= right) {
         int mid = left + (right - left) / 2;
         if (sourceReports[mid].reportIndex == keyId) {
             return &sourceReports[mid];
-        }
-        else if (sourceReports[mid].reportIndex < keyId) {
+        } else if (sourceReports[mid].reportIndex < keyId) {
             left = mid + 1;
-        }
-        else {
+        } else {
             right = mid - 1;
         }
     }
